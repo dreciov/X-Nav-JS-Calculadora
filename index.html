@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	<title>Binary calculator</title>
+	<script type="text/javascript" charset="utf-8">
+    var opone;
+    var optwo;
+    function one(){
+      var display = document.getElementById("display");
+      display.innerHTML = "1";
+    }
+
+    function zero(){
+      var display = document.getElementById("display");
+      display.innerHTML = "0";
+    }
+
+    function plus(){
+      var display = document.getElementById("display");
+      opone = display.innerHTML;
+      display.innerHTML = "";
+    }
+
+    function equal(){
+      var result;
+      var display2 = document.getElementById("display").innerHTML;
+      optwo = display2;
+      if(opone === "1" || optwo === "1"){
+        result = 1;
+      }else{
+        result = 0;
+      }
+      display.innerHTML = "result "+ result;
+    }
+	</script>
+	</head>
+
+	<body>
+
+		<p><span id="display"></span></p>
+		<p><a href="javascript:zero()"> 0</a><a href="javascript:one()"> 1</a></p>
+    <p><a href="javascript:plus()"> +</a><a href="javascript:equal()"> =</a></p>
+
+
+
+	</body>
+	</html>
